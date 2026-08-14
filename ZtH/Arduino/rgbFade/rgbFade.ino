@@ -1,6 +1,6 @@
-const int redLed = pwm1;    //replace pwm1 with chosen pwm pin
-const int greenLed = pwm2;  //replace pwm2 with chosen pwm pin
-const int blueLed = pwm3;   //replace pwm3 with chosen pwm pin
+#define redLed 9
+#define greenLed 10
+#define blueLed 11
 
 
 
@@ -15,16 +15,17 @@ void setup() {
 void loop() {
   rgbFade(14, 117, 184);
   delay(500);
-  digitalWrite(redLed, 0);
-  digitalWrite(greenLed, 0);
-  digitalWrite(blueLed, 0);
+  analogWrite(redLed, 0);
+  analogWrite(greenLed, 0);
+  analogWrite(blueLed, 0);
+  delay(500);
 }
 
-void rgbFade(r, g, b) {  //fades specified rgb colour in from 0% to 100% brightness
+void rgbFade(int r, int g, int b) {  //fades specified rgb colour in from 0% to 100% brightness
   for (int i = 0; i < 100; i++) {
-    digitalWrite(redLed, (i / 100.0) * r);
-    digitalWrite(greenLed, (i / 100.0) * g);
-    digitalWrite(blueLed, (i / 100.0) * b);
+    analogWrite(redLed, (i / 100.0) * r);
+    analogWrite(greenLed, (i / 100.0) * g);
+    analogWrite(blueLed, (i / 100.0) * b);
     delay(20);
   }
 }

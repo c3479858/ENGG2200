@@ -1,6 +1,6 @@
-const int redPin = 3;
-const int greenPin = 4;
-const int bluePin = 5;
+#define redPin 9
+#define greenPin 10
+#define bluePin 11
 
 void setup() {
   Serial.begin(9600);
@@ -13,11 +13,11 @@ void setup() {
 
 void loop() {
   ledRed();
-  delay(250);
+  delay(1000);
   ledGreen();
-  delay(250);
+  delay(1000);
   ledBlue();
-  delay(250);
+  delay(1000);
 }
 
 void ledRed() {

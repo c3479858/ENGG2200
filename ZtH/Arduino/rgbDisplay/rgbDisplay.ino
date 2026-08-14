@@ -1,6 +1,6 @@
-const int redLed = pwm1;    //replace pwm1 with chosen pwm pin
-const int greenLed = pwm2;  //replace pwm2 with chosen pwm pin
-const int blueLed = pwm3;   //replace pwm3 with chosen pwm pin
+#define redLed 9
+#define greenLed 10
+#define blueLed 11
 
 
 
@@ -17,8 +17,8 @@ void setup() {
 void loop() {
 }
 
-void rgbDisplay(r, g, b) {  //sets specified rgb colour
-  digitalWrite(redLed, r);
-  digitalWrite(greenLed, g);
-  digitalWrite(blueLed, b);
+void rgbDisplay(int r, int g, int b) {  //sets specified rgb colour
+  analogWrite(redLed, r);
+  analogWrite(greenLed, g);
+  analogWrite(blueLed, b);
 }

@@ -16,9 +16,9 @@ void loop() {
   pulse(ledPin, 5);
 }
 
-void pulse(pin, hertz) {
+void pulse(int pin, int hertz) {
   timeNow = millis();                          //sets timeNow to current millis
-  if ((timeNow - timeLast) >= 1000 / hertz) {  //if loop, checks to see if 1/htz seconds have passed
+  if ((timeNow - timeLast) >= 500 / hertz) {  //if loop, checks to see if 1/htz seconds have passed
     timeLast = timeNow;                        //resets loop
     digitalWrite(pin, !digitalRead(pin));      //sets led to whatever state it isn't in (in theory)
   }

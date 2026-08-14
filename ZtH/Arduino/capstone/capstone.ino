@@ -12,20 +12,21 @@ Allowing brightness modulation based on the position of the potentiometer
 */
 
 //Pin assignments
-#define ledPin 13
+#define ledPin 13  //internal LED is pin 13
 #define buttonPin 2
 #define analogPin A0
-#define redLed 9
-#define greenLed 10
-#define blueLed 11
+#define redLed 9     //9 is a pwm pin
+#define greenLed 10  //10 is a pwm pin
+#define blueLed 11   //11 is a pwm pin
 
+//Initialising values
 unsigned long timeNow = 0;
 unsigned long timeLast = 0;
-int buttonState = 0;
-int analogState = 0;
-int analogPercent = 0;
+
+const float bitRef = 1023.0;  //reference for maximum read value of A0 (2^10)
+
+//hertz, this is used to determine report rate of Serial and flash rate of LED simultaneously. These can be decoupled but that is out of scope
 const int hertz = 5;
-const float bitRef = 1023.0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
@@ -40,51 +41,36 @@ void setup() {
 
 void loop() {
   timeNow = millis();  //sets timeNow to current millis
-  buttonState = digitalRead(buttonPin);
-  analogState = analogRead(analogPin);
-  analogPercent = ((analogState / bitRef) * 100);  //changes analogState from 2^10 to a percentage
 
-  if ((timeNow - timeLast) >= 1000 / hertz) {  //if loop, checks to see if 1/htz seconds have passed
-    timeLast = timeNow;                        //resets loop
-    digitalWrite(ledPin, !digitalRead(ledPin));      //sets led to whatever state it isn't in (in theory)
+  //NOTE unsure whether to initialise these in the preamble or not, both seem to function the same
+  int buttonState = digitalRead(buttonPin);
+  int analogState = analogRead(analogPin);
+  int analogPercent = ((analogState / bitRef) * 100);  //changes analogState from 2^10 to an integer percentage
 
+  if ((timeNow - timeLast) >= 500 / hertz) {    //if loop, checks to see if 1/htz seconds have passed
+    timeLast = timeNow;                         //resets loop
+    analogWrite(ledPin, !digitalRead(ledPin));  //sets led to whatever state it isn't in
+
+    //Serial printing
+    //NOTE: unsure how to condense this, maybe something similar to python .format
     Serial.print("Button is ");
     Serial.println(buttonState);
     Serial.print("Potentiometer is at ");
-    Serial.print(analogState);
+    Serial.print(analogPercent);
     Serial.println("%");
   }
-  if (buttonState = HIGH) {
+
+  if (buttonState == 0) {                     //when button is pressed (i.e. 0)
     rgbControl(14, 117, 184, analogPercent);  //change to one of the specified colour if needed
   } else {
-    rgbControl(0, 0, 0, 0);
-  }
+    rgbControl(0, 0, 0, 0);  //switch LED off
+  }                          //rgbControl call is probably more efficient than manually setting analogWrite for all pins.
 }
 
+
+//rgbControl function, sets led to a specified value and brightness, where i is an integer percentage!!
 void rgbControl(int r, int g, int b, int i) {
-  digitalWrite(redLed, (i / 100.0) * r);
-  digitalWrite(greenLed, (i / 100.0) * g);
-  digitalWrite(blueLed, (i / 100.0) * b);
+  analogWrite(redLed, (i / 100.0) * r);
+  analogWrite(greenLed, (i / 100.0) * g);
+  analogWrite(blueLed, (i / 100.0) * b);
 }
-
-/* not good use of functions, relocated to loop()
-
-void pulse(led, button, pot, hertz) {
-  timeNow = millis();  //sets timeNow to current millis
-
-  if ((timeNow - timeLast) >= 1000 / hertz) {  //if loop, checks to see if 1/htz seconds have passed
-    timeLast = timeNow;                        //resets loop
-    digitalWrite(led, !digitalRead(led));      //sets led to whatever state it isn't in (in theory)
-
-    buttonState = digitalRead(button);
-    analogState = analogRead(pot);
-    analogPercent = ((analogState / bitRef) * 100);
-
-    Serial.print("Button is ");
-    Serial.println(buttonState);
-    Serial.print("Potentiometer is at ");
-    Serial.print(analogState);
-    Serial.println("%");
-  }
-}
-*/

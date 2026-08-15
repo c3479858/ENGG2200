@@ -7,6 +7,12 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "servo controller 555 pcb")
+		(company "NUTeams")
+		(comment 1 "Theo Devos-Vernes")
+		(comment 2 "c3479858")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
@@ -4457,6 +4463,18 @@
 		(layer "Edge.Cuts")
 		(uuid "46dc82df-a4f4-4b43-ad9a-0f19a6b17b6f")
 	)
+	(gr_text "Theo Devos-Vernes\nc3479858\n15/08/2026"
+		(at 78 67 0)
+		(layer "F.SilkS")
+		(uuid "b20f8722-a063-46bb-bbb5-bbd553b76733")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 87.88 88)
 		(end 83.88 84)
@@ -4706,6 +4724,22 @@
 		(uuid "2733624e-d649-424f-b0b5-c3fe686dd927")
 	)
 	(segment
+		(start 71.5 85)
+		(end 79.58 93.08)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "290fba35-c44d-4a9e-ace7-7d2938310660")
+	)
+	(segment
+		(start 68.5375 77)
+		(end 68.5375 82.0375)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "2ad15e85-76a9-4bc9-8bc9-ca97f0ae9791")
+	)
+	(segment
 		(start 78.1 107.5)
 		(end 78.1 94.56)
 		(width 0.2)
@@ -4738,6 +4772,14 @@
 		(uuid "3ed0a6ea-8fcd-460e-a0d7-9f2b7a450aab")
 	)
 	(segment
+		(start 68.5375 82.0375)
+		(end 71.5 85)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "42eb2930-cf69-4e37-a21b-53463085f384")
+	)
+	(segment
 		(start 80 93.08)
 		(end 87.88 93.08)
 		(width 0.2)
@@ -4754,28 +4796,12 @@
 		(uuid "683885a8-fcee-46ca-a98a-d35113535ad4")
 	)
 	(segment
-		(start 71.5 85)
-		(end 71.5 79.9625)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "+5V")
-		(uuid "85a3376f-b871-4e61-b5b7-03ce9d7307f7")
-	)
-	(segment
 		(start 105 85)
 		(end 100 85)
 		(width 0.4)
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "88cd2acd-078b-4079-9bee-f66dc23b5c42")
-	)
-	(segment
-		(start 71.5 85)
-		(end 79.58 93.08)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "+5V")
-		(uuid "98b4bb04-e3eb-4588-8584-74c0caa31211")
 	)
 	(segment
 		(start 100 78.5)
@@ -4800,14 +4826,6 @@
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "d16cc6e7-a927-45f7-85ed-2f0471404989")
-	)
-	(segment
-		(start 71.5 79.9625)
-		(end 68.5375 77)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "+5V")
-		(uuid "e266910e-3899-4d9e-a331-ae702257ae01")
 	)
 	(segment
 		(start 95.5 85.46)

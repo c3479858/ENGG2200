@@ -559,7 +559,7 @@
       "netlist": "",
       "plot": "../servo_controller_555_gerbers/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "servo_controller_555.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

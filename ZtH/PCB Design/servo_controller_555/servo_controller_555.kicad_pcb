@@ -598,7 +598,7 @@
 			(remove_unused_layers no)
 			(net "unconnected-(U1-CONT-Pad5)")
 			(pinfunction "CONT_5")
-			(pintype "passive")
+			(pintype "passive+no_connect")
 			(uuid "8d4d65b3-4b0b-41cb-b0ca-6ae2013f1b52")
 		)
 		(pad "6" thru_hole circle
@@ -1696,7 +1696,7 @@
 			(remove_unused_layers no)
 			(net "unconnected-(RV1-Pad3)")
 			(pinfunction "3_3")
-			(pintype "passive")
+			(pintype "passive+no_connect")
 			(uuid "dd1194b6-ba3b-432c-93e6-f1ee35f06e91")
 		)
 		(pad "MP" thru_hole circle

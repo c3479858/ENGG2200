@@ -20,7 +20,7 @@
 6: CAN transceiver!!!!!
     -TJA1051 transciever
 
-7: 5A fuse
+7: 5A fuse (resettable fuse!!)
 
 8: Reverse polarity protection
 

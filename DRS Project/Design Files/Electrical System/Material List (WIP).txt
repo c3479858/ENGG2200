@@ -1,6 +1,6 @@
 1: Buck/power converter
     -CE05291 (5V converter)
-    -LM2496 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
+    -LM2596 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
 2: Teensy 4.0
 3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)
     -ADA2307 $27
@@ -12,3 +12,5 @@
 6: CAN transceiver!!!!!
 7: 5A fuse
 8: Reverse polarity protection
+
+NOTES: PUT A SWITCH ON THE CIRCUIT TO SWITCH BETWEEN CAR AND USB POWER; OR wire up own usb with no power for data management (pick 1st option)

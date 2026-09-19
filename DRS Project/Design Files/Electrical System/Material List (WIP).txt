@@ -1,16 +1,26 @@
-1: Buck/power converter
-    -CE05291 (5V converter)
+1: Power Input and Regulation
     -LM2596 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
+    -HCM1A1104V3 (33uH inductor) https://www.digikey.com.au/en/products/detail/eaton-electronics-division/HCM1A1104V3-330-R/26798834
+    -1N5822 Schottky Diode https://www.digikey.com.au/en/products/detail/stmicroelectronics/1N5822/1037332
+    -misc resistors (in mecha lab)
+    -misc capacitors (in mecha lab)
+
 2: Teensy 4.0
+
 3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)
     -ADA2307 $27
     -DSS-M15S $29
     -FS5115M $20 (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
     -MG996R https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
+
 4: servo driver circuit
+
 5: Power indicator LEDs for every voltage as well as fused vs unfused
+
 6: CAN transceiver!!!!!
+
 7: 5A fuse
+
 8: Reverse polarity protection
 
 NOTES: PUT A SWITCH ON THE CIRCUIT TO SWITCH BETWEEN CAR AND USB POWER; OR wire up own usb with no power for data management (pick 1st option)

@@ -1,0 +1,11 @@
+1: Buck/power converter
+    -CE05291 (5V converter)
+    -
+2: Teensy 4.0
+3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)
+    -ADA2307 $27
+    -DSS-M15S $29
+    -FS5115M $20 (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
+    -MG996R https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
+4: servo driver circuit
+5:

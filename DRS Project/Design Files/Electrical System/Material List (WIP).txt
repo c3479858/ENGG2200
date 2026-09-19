@@ -1,6 +1,6 @@
 1: Buck/power converter
     -CE05291 (5V converter)
-    -
+    -LM2496 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
 2: Teensy 4.0
 3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)
     -ADA2307 $27
@@ -8,4 +8,7 @@
     -FS5115M $20 (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
     -MG996R https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
 4: servo driver circuit
-5:
+5: Power indicator LEDs for every voltage as well as fused vs unfused
+6: CAN transceiver!!!!!
+7: 5A fuse
+8: Reverse polarity protection

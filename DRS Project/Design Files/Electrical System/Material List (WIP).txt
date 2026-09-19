@@ -24,3 +24,4 @@
 8: Reverse polarity protection
 
 NOTES: PUT A SWITCH ON THE CIRCUIT TO SWITCH BETWEEN CAR AND USB POWER; OR wire up own usb with no power for data management (pick 1st option)
+NOTES: FIND CAPACITANCE FOR FEEDBACK CAPACITOR FF

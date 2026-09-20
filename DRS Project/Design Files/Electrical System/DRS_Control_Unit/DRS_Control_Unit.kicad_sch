@@ -3441,10 +3441,10 @@
 		(uuid "bfaf0620-2a2d-4051-b93b-298ac418af7f")
 	)
 	(junction
-		(at 63.5 99.06)
+		(at 68.58 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c43e03e3-55bf-483a-bc18-6c840e0c4a65")
+		(uuid "c623b9e9-5b09-4199-9006-d3a79e439c2f")
 	)
 	(junction
 		(at 43.18 91.44)
@@ -3642,6 +3642,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 96.52) (xy 68.58 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bd9e2e7-f025-47f4-af56-4e31fd03ebf6")
+	)
+	(wire
+		(pts
 			(xy 43.18 91.44) (xy 44.45 91.44)
 		)
 		(stroke
@@ -3649,16 +3659,6 @@
 			(type default)
 		)
 		(uuid "1eaa0744-fa54-482c-af47-902738ff9610")
-	)
-	(wire
-		(pts
-			(xy 68.58 96.52) (xy 68.58 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "200a6a02-a226-4423-ac1f-6612324b252d")
 	)
 	(wire
 		(pts
@@ -3812,7 +3812,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 109.22) (xy 81.28 109.22)
+			(xy 63.5 109.22) (xy 68.58 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3859,16 +3859,6 @@
 			(type default)
 		)
 		(uuid "749b20ad-141c-4f4f-9bc7-3fb8c880555d")
-	)
-	(wire
-		(pts
-			(xy 63.5 99.06) (xy 68.58 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c40c7d9-ea47-4eb1-ae5d-098740e03762")
 	)
 	(wire
 		(pts
@@ -4069,6 +4059,16 @@
 			(type default)
 		)
 		(uuid "ee52f5f3-d279-44e6-be83-d5b546caa086")
+	)
+	(wire
+		(pts
+			(xy 68.58 109.22) (xy 81.28 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef86ff9e-8a24-4ed9-8b0e-8ec3d1ce2f63")
 	)
 	(wire
 		(pts
@@ -4803,7 +4803,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DEV-15583:MODULE_DEV-15583"
+		(property "Footprint" "TEENSY_4:MODULE_DEV-15583"
 			(at 195.58 83.82 0)
 			(hide yes)
 			(show_name no)

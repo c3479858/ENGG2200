@@ -11,20 +11,29 @@
     -ADA2307 $27
     -DSS-M15S $29
     -FS5115M $20 (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
-    -MG996R https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
+    -MG996R $18 https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
 
-4: servo driver circuit
+4: Servo Driver Circuit
+    -Signal from Teensy 4.0
+    -Power from power input and reg circuit
+
 
 5: Power indicator LEDs for every voltage as well as fused vs unfused
+    -Any generic SMD LED will work fine, THT if needed to protrude from casing (ASK ADAM)
+    -Calculate resistances based on what LEDs are available in MECHA lab
 
-6: CAN transceiver!!!!!
+6: CAN transceiver
     -TJA1051 transciever
 
-7: 5A fuse (resettable fuse!!)
+7: 5A fuse
+    -resettable fuse (enables itself after cooling down)
 
 8: Reverse polarity protection
+    -any generic diode that can block reverse polarity will do fine
 
 NOTES: PUT A SWITCH ON THE CIRCUIT TO SWITCH BETWEEN CAR AND USB POWER; OR wire up own usb with no power for data management (pick 1st option)
 NOTES: ^ NEVERMIND YOU CAN CUT A TRACE ON TEENSY TO DISABLE COUPLING ^
 NOTES: FIND CAPACITANCE FOR FEEDBACK CAPACITOR FF
 QUESTION: IS CANBUS ON CAR PRE-TERMINATED OR DO WE NEED TERMINATION RESISTORS
+NOTES: ENSURE BREADBOARD TESTING IS DONE WITH BENCHTOP POWER SUPPLIES, ESPECIALLY FOR POWER CIRCUIT!!!
+    -May need to get THT components so that this is a cheaper process...

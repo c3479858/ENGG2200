@@ -8,10 +8,8 @@
 2: Teensy 4.0
 
 3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)
-    -ADA2307 $27
-    -DSS-M15S $29
-    -FS5115M $20 (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
-    -MG996R $18 https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
+    -FS5115M $20 15kg (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
+    -MG996R $18 11kg https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
 
 4: Servo Driver Circuit
     -Signal from Teensy 4.0

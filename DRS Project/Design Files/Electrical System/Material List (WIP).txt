@@ -1,7 +1,10 @@
 1: Power Input and Regulation
     -LM2596 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
+        -USE IT, we can turn up the voltage by swapping a resistor
     -HCM1A1104V3 (33uH inductor) https://www.digikey.com.au/en/products/detail/eaton-electronics-division/HCM1A1104V3-330-R/26798834
     -1N5822 Schottky Diode https://www.digikey.com.au/en/products/detail/stmicroelectronics/1N5822/1037332
+    -OR SS54 https://www.digikey.com.au/en/products/detail/shenzhen-slkormicro-semicon-co-ltd/SS54BF/26600991
+        -Or another correctly specced Schottky diode from MECHA lab
     -misc resistors (in mecha lab)
     -misc capacitors (in mecha lab)
 
@@ -9,25 +12,18 @@
 
 3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)
     -FS5115M $20 15kg (standard size and a little overkill,  but sooo cheap, metal gears, lower failure rate) <--
-    -MG996R $18 11kg https://www.digikey.com.au/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
+    -MG996R $12 11kg https://www.digikey.com/en/products/detail/terasic-inc/FXX-3037-TOP/7044113 <--
 
-4: Servo Driver Circuit
-    -Signal from Teensy 4.0
-    -Power from power input and reg circuit
-
-
-5: Power indicator LEDs for every voltage as well as fused vs unfused
+4: Power indicator LEDs for every voltage as well as fused vs unfused
     -Any generic SMD LED will work fine, THT if needed to protrude from casing (ASK ADAM)
     -Calculate resistances based on what LEDs are available in MECHA lab
 
-6: CAN transceiver
-    -TJA1051 transciever
+5: CAN transceiver
+    -TJA1051 transciever (MECHA lab)
 
-7: 5A fuse
+6: 5A fuse
     -resettable fuse (enables itself after cooling down)
-
-8: Reverse polarity protection
-    -any generic diode that can block reverse polarity will do fine
+    -or MECHA lab fuse and fuse holder
 
 NOTES: PUT A SWITCH ON THE CIRCUIT TO SWITCH BETWEEN CAR AND USB POWER; OR wire up own usb with no power for data management (pick 1st option)
 NOTES: ^ NEVERMIND YOU CAN CUT A TRACE ON TEENSY TO DISABLE COUPLING ^

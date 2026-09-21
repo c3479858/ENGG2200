@@ -3989,7 +3989,7 @@
 		)
 		(uuid "58c8449b-5171-4bc7-a4a9-6340c69b09f1")
 	)
-	(text_box "NOTE: Can simplify circuit by making LM2596 push out ~5.3V so that the servo, teensy and CAN Transceiver can all run from the one PSU, otherwise separate, especially if we end up being able to afford an 8V servo (15kg)"
+	(text_box "NOTE: Can simplify circuit by making LM2596 push out ~5.3V so that the servo, teensy and CAN Transceiver can all run from the one PSU, can also use MECHA lab 5V buck converter for freeeeeee. Otherwise separate, especially if we end up being able to afford an 8V servo (15kg)"
 		(exclude_from_sim no)
 		(at 38.1 140.97 0)
 		(size 222.25 6.35)
@@ -4366,16 +4366,6 @@
 			(type default)
 		)
 		(uuid "2befe3ac-4c27-4916-9e8a-57d29ab583de")
-	)
-	(wire
-		(pts
-			(xy 83.82 58.42) (xy 86.36 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31effc47-5bb9-4867-9893-140d4fdb706b")
 	)
 	(wire
 		(pts
@@ -4998,16 +4988,6 @@
 		(uuid "6e76c2b4-2d52-4cf8-853f-5bb79126d6cf")
 	)
 	(label "VIN"
-		(at 83.82 58.42 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "89460419-9579-438f-910a-193df4ac6c06")
-	)
-	(label "VIN"
 		(at 44.45 113.03 180)
 		(effects
 			(font
@@ -5411,6 +5391,85 @@
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+6V")
+		(at 86.36 58.42 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0c5a1d9a-f0ab-4361-af9c-3fb0cec1025a")
+		(property "Reference" "#PWR018"
+			(at 90.17 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+6V"
+			(at 82.55 58.4199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+6V\""
+			(at 86.36 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "99bea7db-f3b8-4639-8037-8c43b3fa77aa")
+		)
+		(instances
+			(project "DRS_Control_Unit"
+				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)

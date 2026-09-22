@@ -689,6 +689,12 @@
           "label": "Availability",
           "name": "Availability",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Information",
+          "name": "Information",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -739,7 +745,7 @@
         "uuid": "63b578ff-1476-4f7d-9cf7-fea775e132b7"
       }
     ],
-    "used_designators": "#FLG1-5,U1-4,F1,TP1-6,#PWR1-16,#PWR18,C1-3,D1-7,L1,R1-6,J1-2",
+    "used_designators": "#FLG1-5,U1-4,F1-2,TP1-6,#PWR1-16,#PWR18,C1-3,D1-7,L1,R1-6,J1-2",
     "variants": []
   },
   "sheets": [

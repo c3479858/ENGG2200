@@ -1,4 +1,4 @@
-1: Power Input and Regulation
+1a: Power Input and Regulation
     -LM2596 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
         -USE IT, we can turn up the voltage by swapping a resistor
 
@@ -14,7 +14,12 @@
 
     -100u Aluminium Electrolytic Capacitor https://www.digikey.com.au/en/products/detail/nichicon/UWT1H101MNL1GS/589967
 
+1b: -AP63301WU-7 https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP63301WU-7/10491607
+    -4.7uH inductor 
     -AMS1117
+    -mecha lab caps
+    -mecha lab resistors
+    
 
 2: Teensy 4.0
 
@@ -29,15 +34,15 @@
 5: CAN transceiver
     -TJA1051 transciever (MECHA lab)
 
-6: 5A fuse
-    -resettable fuse (enables itself after cooling down)
+6: 5A & 3A fuse
     -or MECHA lab fuse and fuse holder <--
 
-NOTES: PUT A SWITCH ON THE CIRCUIT TO SWITCH BETWEEN CAR AND USB POWER; OR wire up own usb with no power for data management (pick 1st option)
-NOTES: ^ NEVERMIND YOU CAN CUT A TRACE ON TEENSY TO DISABLE COUPLING ^
-NOTES: FIND CAPACITANCE FOR FEEDBACK CAPACITOR FF
+NOTES: CUT A TRACE ON TEENSY TO DISABLE VOLTAGE COUPLING!!
+
 QUESTION: IS CANBUS ON CAR PRE-TERMINATED OR DO WE NEED TERMINATION RESISTORS
+
 NOTES: ENSURE BREADBOARD TESTING IS DONE WITH BENCHTOP POWER SUPPLIES, ESPECIALLY FOR POWER CIRCUIT!!!
     -May need to get THT components so that this is a cheaper process...
+    
 NOTES: Get 1206 size components for SMD, OR use THT, THT would allow easier breadboard prototyping
     -USE MECHA LAB STUFF, BUY AS LITTLE AS POSSIBLE

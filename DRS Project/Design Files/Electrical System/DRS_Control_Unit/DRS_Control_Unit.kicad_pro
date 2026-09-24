@@ -144,7 +144,7 @@
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.25,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
@@ -240,7 +240,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1"
+      "sch_revision": "1.1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -689,12 +689,6 @@
           "label": "Availability",
           "name": "Availability",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Information",
-          "name": "Information",
-          "show": false
         }
       ],
       "filter_string": "",
@@ -733,14 +727,6 @@
     "meta": {
       "version": 1
     },
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 4,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -753,7 +739,7 @@
         "uuid": "63b578ff-1476-4f7d-9cf7-fea775e132b7"
       }
     ],
-    "used_designators": "IC1,#FLG1-7,U1-5,F1-2,TP1-6,#PWR1-23,C1-9,D1-7,L1-3,R1-10,J1-3",
+    "used_designators": "J1-3,R1-8,TP1-6,L1,D1-9,C1-4,#PWR1-20,F1,F3,U1-4,#FLG1-5",
     "variants": []
   },
   "sheets": [

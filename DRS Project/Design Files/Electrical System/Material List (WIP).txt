@@ -1,6 +1,4 @@
-1a: Power Input and Regulation
-    -LM2596 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
-        -USE IT, we can turn up the voltage by swapping a resistor
+1a: -LM2596 (5V BUCK) https://www.digikey.com.au/en/products/detail/onsemi/LM2596DSADJR4G/2003291
 
     -33uH inductor https://www.digikey.com.au/en/products/detail/abracon-llc/AMDLA1004S-330MT/13244870
 
@@ -15,12 +13,17 @@
     -100u Aluminium Electrolytic Capacitor https://www.digikey.com.au/en/products/detail/nichicon/UWT1H101MNL1GS/589967
 
 1b: -AP63301WU-7 https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP63301WU-7/10491607
-    -4.7uH inductor 
+
+    -10uH inductor https://www.digikey.com.au/en/products/detail/abracon-llc/ASPI-0630LR-100M-T15/3059602
+
     -AMS1117
+
+    -100uF ceramic capacitor
+
     -mecha lab caps
+
     -mecha lab resistors
     
-
 2: Teensy 4.0
 
 3: servo motors (metal gear, NO PLASTIC) NOTE: do force calculations to determine kgf of servo (10kg/cm should be fine)

@@ -8354,7 +8354,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "558249e5-3fe8-4d2c-8440-5a7e596c80c9")
-		(property "Reference" "F2"
+		(property "Reference" "F3"
 			(at 81.28 250.19 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8416,7 +8416,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "F2")
+					(reference "F3")
 					(unit 1)
 				)
 			)
@@ -9066,7 +9066,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88ae6376-6f62-44f3-a105-709aec2d08ae")
-		(property "Reference" "F3"
+		(property "Reference" "F2"
 			(at 106.426 117.094 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9128,7 +9128,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "F3")
+					(reference "F2")
 					(unit 1)
 				)
 			)

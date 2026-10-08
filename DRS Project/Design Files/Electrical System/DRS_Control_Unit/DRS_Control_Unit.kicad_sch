@@ -849,7 +849,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:DE9_Socket"
+		(symbol "Connector:DE9_Socket_MountingHoles"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -860,7 +860,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 13.97 0)
+				(at 0 16.51 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -869,8 +869,8 @@
 					)
 				)
 			)
-			(property "Value" "DE9_Socket"
-				(at 0 -14.605 0)
+			(property "Value" "DE9_Socket_MountingHoles"
+				(at 0 14.605 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -901,7 +901,7 @@
 					)
 				)
 			)
-			(property "Description" "9-pin D-SUB connector, socket (female)"
+			(property "Description" "9-pin D-SUB connector, socket (female), Mounting Hole"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -934,7 +934,7 @@
 					)
 				)
 			)
-			(symbol "DE9_Socket_0_1"
+			(symbol "DE9_Socket_MountingHoles_0_1"
 				(polyline
 					(pts
 						(xy -3.81 13.335) (xy -3.81 -13.335) (xy 3.81 -9.525) (xy 3.81 9.525) (xy -3.81 13.335)
@@ -1155,7 +1155,7 @@
 					)
 				)
 			)
-			(symbol "DE9_Socket_1_1"
+			(symbol "DE9_Socket_MountingHoles_1_1"
 				(pin passive line
 					(at -7.62 10.16 0)
 					(length 3.81)
@@ -1311,6 +1311,24 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -15.24 90)
+					(length 3.81)
+					(name "PAD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "SH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5648,6 +5666,10 @@
 		(uuid "e49daecb-30af-4c4a-80d3-d237a50226c7")
 	)
 	(no_connect
+		(at 137.16 137.16)
+		(uuid "f7d1d69a-0df8-4527-8a17-3a7f36079c37")
+	)
+	(no_connect
 		(at 167.64 74.93)
 		(uuid "fbd00b54-51f5-4857-8d80-f7581d4395a4")
 	)
@@ -6804,7 +6826,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "NU-Teams-Footprints:DT15-6P"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
 			(at 247.65 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6966,7 +6988,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 			(at 107.442 74.93 90)
 			(hide yes)
 			(show_name no)
@@ -7046,7 +7068,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+		(property "Footprint" "NU-Teams-Footprints:DT15-6P"
 			(at 179.07 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -7813,7 +7835,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "160483df-2c16-4c7f-8bf2-8158436a84ef")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR09"
 			(at 114.3 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -7874,7 +7896,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR017")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -8053,7 +8075,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1a4a5871-a177-46c8-aaba-eca8bf4d4e93")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR013"
 			(at 250.19 127 0)
 			(hide yes)
 			(show_name no)
@@ -8113,7 +8135,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR02")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -8375,7 +8397,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f8e6e53-5a2f-44eb-8c8a-6ab7fdf5d706")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR010"
 			(at 76.2 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -8435,7 +8457,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR018")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -8532,7 +8554,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3561d3a3-92a0-4348-8aa5-c779affe5434")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR01"
 			(at 45.72 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -8593,7 +8615,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR09")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -8692,7 +8714,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "365eba02-d517-4a3a-b3a5-97793e4fa3c9")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR011"
 			(at 195.58 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -8752,7 +8774,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR019")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -8952,7 +8974,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b16b6a0-dd02-4e93-a9c1-79675c4073d0")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR04"
 			(at 165.1 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -9012,7 +9034,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR012")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -9030,7 +9052,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d8d9602-a262-450b-a64a-8c91c7ddc8f6")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR08"
 			(at 101.6 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9090,7 +9112,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR016")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -9185,7 +9207,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f62ecff-a1e3-4f92-8329-d06ba9f108c8")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR016"
 			(at 175.26 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -9246,7 +9268,114 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR05")
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:DE9_Socket_MountingHoles")
+		(at 137.16 152.4 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "48fb013b-39f5-441c-bc14-b96cad6a2abd")
+		(property "Reference" "J4"
+			(at 142.24 151.1299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DE9_Socket_MountingHoles"
+			(at 142.24 153.6699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Dsub:DSUB-9_Socket_Vertical_P2.77x2.84mm_MountingHoles"
+			(at 137.16 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "9-pin D-SUB connector, socket (female), Mounting Hole"
+			(at 137.16 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "6cb814bd-a404-4b3f-a2fa-c70dbaa83dfd")
+		)
+		(pin "5"
+			(uuid "125bc957-fc1f-4e83-872c-3b0ecf828c6c")
+		)
+		(pin "6"
+			(uuid "2c1a5495-886c-4eff-a46e-13b355c7a50f")
+		)
+		(pin "1"
+			(uuid "8809353e-235c-4a94-b051-ada653f80daf")
+		)
+		(pin "2"
+			(uuid "69a73df4-65de-46eb-8a6e-567d752cf956")
+		)
+		(pin "SH"
+			(uuid "4829fc28-20ef-489c-b982-b8023031cdd8")
+		)
+		(pin "3"
+			(uuid "09944439-9482-40af-b265-ee2ae0c18be4")
+		)
+		(pin "8"
+			(uuid "0c5cc1d3-0cbb-403f-827c-a95348c4763d")
+		)
+		(pin "7"
+			(uuid "6205304e-a5b9-4992-aae8-10fc8e0c638f")
+		)
+		(pin "9"
+			(uuid "65a928b7-1fbe-450a-a371-e25aa727c20e")
+		)
+		(instances
+			(project "DRS_Control_Unit"
+				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -9264,7 +9393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b4320fe-4ece-4ea1-957f-ddb37c317007")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR019"
 			(at 180.34 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -9325,7 +9454,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR08")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -10190,7 +10319,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 99.822 74.93 90)
 			(hide yes)
 			(show_name no)
@@ -10328,7 +10457,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79b4e972-7696-4d92-ba43-5e2aa7259921")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR015"
 			(at 251.46 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -10389,7 +10518,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR04")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -10569,7 +10698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7cb22a23-97c5-4ae4-ba2e-6d2f2e21382a")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR06"
 			(at 97.79 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10629,7 +10758,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR014")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -10724,7 +10853,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "83770983-d518-4236-b207-30969e72e278")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR07"
 			(at 234.95 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -10784,7 +10913,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR015")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -10801,7 +10930,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8739fba1-0db7-4635-b94e-e36b68c0818f")
-		(property "Reference" "#FLG06"
+		(property "Reference" "#FLG05"
 			(at 118.11 88.265 0)
 			(hide yes)
 			(show_name no)
@@ -10861,7 +10990,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#FLG06")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -11193,7 +11322,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9589db2a-42a6-44cd-9b12-b207eca7da09")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR014"
 			(at 215.9 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -11253,7 +11382,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR03")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -11428,7 +11557,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c797fb5-a87f-4c4a-a843-867d8590b050")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR05"
 			(at 219.71 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11489,7 +11618,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR013")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -11744,7 +11873,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a7abbb52-5d10-4d94-9738-59942256ead4")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR017"
 			(at 173.99 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -11804,109 +11933,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:DE9_Socket")
-		(at 137.16 152.4 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab3f1815-35b7-4982-be90-efb0ca83099b")
-		(property "Reference" "J4"
-			(at 137.16 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DE9_Socket"
-			(at 137.16 137.16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Dsub:DSUB-9_Socket_Vertical_P2.77x2.84mm"
-			(at 137.16 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "9-pin D-SUB connector, socket (female)"
-			(at 137.16 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "b5f841d0-a2dc-4d65-a590-0bd0061bf087")
-		)
-		(pin "3"
-			(uuid "1cd1fbec-c6a4-4e75-97a1-1e32a192eb57")
-		)
-		(pin "8"
-			(uuid "8040ecd3-979b-4147-bec0-37999cde8566")
-		)
-		(pin "7"
-			(uuid "e13391f4-61d5-4f29-a517-7c0fed52236f")
-		)
-		(pin "9"
-			(uuid "6c982347-80ef-4569-93cb-593fbf0dc772")
-		)
-		(pin "5"
-			(uuid "4185b166-16c6-442e-8e59-be1520174c18")
-		)
-		(pin "6"
-			(uuid "00ee2953-0feb-412a-a792-a62deaacf75c")
-		)
-		(pin "2"
-			(uuid "0fcf11e6-687a-4192-a989-f78c37a6c417")
-		)
-		(pin "1"
-			(uuid "859bb67f-4331-466e-a408-a8d7fd38bfff")
-		)
-		(instances
-			(project "DRS_Control_Unit"
-				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "J4")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -11924,7 +11951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab849cc9-64ca-4b9a-96d7-feb99f8f7aac")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR012"
 			(at 219.71 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -11985,7 +12012,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR01")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -12158,7 +12185,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba1ef3b3-c189-4390-a914-f0115e066f04")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR03"
 			(at 55.88 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -12218,7 +12245,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR011")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -12235,7 +12262,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be423171-fe9b-4543-84dd-dc4af073e6a1")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR018"
 			(at 181.61 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -12295,7 +12322,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR07")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -12816,7 +12843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2d47128-66a7-492c-9db2-23940c10a1bf")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR02"
 			(at 119.38 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -12877,7 +12904,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#PWR010")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -12972,7 +12999,7 @@
 		(in_pos_files no)
 		(dnp yes)
 		(uuid "f1b945de-ee73-43db-8480-a3ef554daeb7")
-		(property "Reference" "#FLG05"
+		(property "Reference" "#FLG06"
 			(at 76.2 244.475 0)
 			(hide yes)
 			(show_name no)
@@ -13032,7 +13059,7 @@
 		(instances
 			(project "DRS_Control_Unit"
 				(path "/63b578ff-1476-4f7d-9cf7-fea775e132b7"
-					(reference "#FLG05")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)

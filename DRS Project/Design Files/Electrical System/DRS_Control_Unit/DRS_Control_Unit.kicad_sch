@@ -5304,7 +5304,7 @@
 		)
 		(uuid "fb5cae6a-32cf-4dbf-9d72-c2af4d7311d2")
 	)
-	(text_box "Non standard block. Reason for using this over a standard circuit is that this power regulation circuit can deliver the required current to our servo, whereas standard servo would be overloaded."
+	(text_box "Non standard block. Reason for using this over a standard circuit is that this power regulation circuit can deliver the required current to our servo, whereas standard buck converter circuit would be overloaded."
 		(exclude_from_sim no)
 		(at 29.21 106.68 0)
 		(size 120.65 6.3499)
@@ -5364,7 +5364,7 @@
 		)
 		(uuid "b4a2f18b-4e6a-445c-86d7-81ca50d8d6a0")
 	)
-	(text_box "Non standard block. Reason is for space efficiency compared to standard +5V regulation circuit."
+	(text_box "Non standard block. Reason is for space efficiency compared to standard 5V regulation circuit."
 		(exclude_from_sim no)
 		(at 80.01 53.34 0)
 		(size 69.85 6.3499)

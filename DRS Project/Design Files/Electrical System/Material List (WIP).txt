@@ -18,7 +18,9 @@
 
     -AMS1117
 
-    -100uF ceramic capacitor
+    -SS54 diode https://www.digikey.com.au/en/products/detail/shenzhen-slkormicro-semicon-co-ltd/SS54/21853075
+
+    -100uF ceramic capacitor https://www.digikey.com.au/en/products/detail/murata-electronics/GRM31CR61A107MEA8L/16033775
 
     -mecha lab caps
 

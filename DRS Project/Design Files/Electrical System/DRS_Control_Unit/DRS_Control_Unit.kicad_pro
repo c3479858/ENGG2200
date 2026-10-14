@@ -162,7 +162,7 @@
         "min_track_width": 0.1998,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -542,7 +542,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "../DRS_Control_Unit_Models/AMDLA1004S-330MT.step",
+      "step": "../DRS_Control_Unit_Models/DRS_Control_Unit.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -755,7 +755,7 @@
         "uuid": "63b578ff-1476-4f7d-9cf7-fea775e132b7"
       }
     ],
-    "used_designators": "#FLG1-6,L1-2,C1-11,D1-10,U1-8,U13,F1-4,SW1-4,SW6,TP1-9,TP15-16,R1-13,R31,#PWR1-35,J1-6,J26,IC1",
+    "used_designators": "IC1,J1-6,J26,#PWR1-35,R1-13,R31,TP1-9,TP15-16,SW1-4,SW6,F1-4,U1-8,U13,D1-10,C1-11,L1-2,#FLG1-6,H1-4",
     "variants": []
   },
   "sheets": [

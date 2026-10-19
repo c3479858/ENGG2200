@@ -12,15 +12,19 @@
 
     -100u Aluminium Electrolytic Capacitor https://www.digikey.com.au/en/products/detail/nichicon/UWT1H101MNL1GS/589967
 
-1b: -AP63301WU-7 https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP63301WU-7/10491607
+1b: -AP63301WU-7    https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP63301WU-7/10491607
+                    https://au.mouser.com/en/ProductDetail/Diodes-Incorporated/AP63301WU-7?qs=bZr6mbWTK5mxozg17S0lNg%3D%3D
 
-    -10uH inductor https://www.digikey.com.au/en/products/detail/abracon-llc/ASPI-0630LR-100M-T15/3059602
+    -10uH inductor  https://www.digikey.com.au/en/products/detail/abracon-llc/ASPI-0630LR-100M-T15/3059602
+                    https://au.mouser.com/en/ProductDetail/ABRACON/ASPI-0630LR-100M-T15?qs=bWAYEm3xoCbJgUApwQS2Lg%3D%3D
 
     -AMS1117
 
-    -SS54 diode https://www.digikey.com.au/en/products/detail/shenzhen-slkormicro-semicon-co-ltd/SS54/21853075
+    -SS54 diode     https://www.digikey.com.au/en/products/detail/shenzhen-slkormicro-semicon-co-ltd/SS54/21853075
+                    https://au.mouser.com/en/ProductDetail/Comchip-Technology/SS54-HF?qs=GBLSl2AkiruU27AsKMcmrg%3D%3D
 
-    -100uF ceramic capacitor https://www.digikey.com.au/en/products/detail/murata-electronics/GRM31CR61A107MEA8L/16033775
+    -100uF cap      https://www.digikey.com.au/en/products/detail/murata-electronics/GRM31CR61A107MEA8L/16033775
+                    https://au.mouser.com/en/ProductDetail/Murata-Electronics/GRM31CR61A107MEA8L?qs=hd1VzrDQEGidurXiDTJOCg%3D%3D
 
     -mecha lab caps
 

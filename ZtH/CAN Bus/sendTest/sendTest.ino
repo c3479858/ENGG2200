@@ -12,7 +12,7 @@ CAN_message_t outgoing_msg;
 void setup(void) {
   // Initialise the bus and set the Baud rate.
   can1.begin();
-  can1.setBaudRate(500000);  // kb/s
+  can1.setBaudRate(1000000);  // b/s
   // Initialise the serial monitor
   Serial.begin(9600);
 
@@ -23,7 +23,7 @@ void setup(void) {
   outgoing_msg.flags.reserved = 0;  // Reserved bit. Leave as dominant (0)
   outgoing_msg.len = 1;             // DLC. How many bytes to send.
   outgoing_msg.flags.overrun = 0;   // Leave as dominant (0)
-  //outgoing_msg.buf[0] = 1;          // Data payload, byte 0, 0-255.
+  outgoing_msg.buf[0] = 1;          // Data payload, byte 0, 0-255.
 }
 
 void loop() {
@@ -31,5 +31,6 @@ void loop() {
   EVERY_N_MILLISECONDS(2000) {
     // Write message to CAN BUS
     can1.write(outgoing_msg);
+    Serial.println("sent");
   }
 }

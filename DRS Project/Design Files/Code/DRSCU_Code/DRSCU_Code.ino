@@ -1,9 +1,10 @@
 #include <FlexCAN_T4.h>
-
+#include <Servo.h>
 //Servo Setup
-#define servoPin 19   //servo signal PWM pin
-int openAngle = 30;   //angle to open servo to (in degrees, might change this to be raw bit value or radians or percentage of limit, idk)
-int closedAngle = 0;  //angle to close servo to (in degrees)
+Servo drs;
+
+int openAngle = 0;     //angle to open servo to (in degrees, might change this to be raw bit value or radians or percentage of limit, idk)
+int closedAngle = 30;  //angle to close servo to (in degrees)
 
 //Timeout Setup
 unsigned long timeNow = 0;
@@ -14,41 +15,51 @@ FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> can1;
 CAN_message_t incoming_msg;
 CAN_message_t outgoing_msg;
 int msg_read = 0;
-int baudRate = 1000;  //CAN baud rate in kb/s
+
+const int baudRate = 1000;  //CAN baud rate in kb/s
+const int ledPin = 13;
 
 void setup() {
-  pinMode(servoPin, OUTPUT);
+  drs.attach(19);
 
   can1.begin();
-  can1.setBaudRate(baudRate * 1000);
+  can1.setMaxMB(16);
+  can1.setBaudRate(int(baudRate * 1000.0));
   Serial.begin(9600);  //start serial
-
-  //outgoing_msg.id = 0;              // Message ID. Decimal, 0-2047
-  //outgoing_msg.flags.remote = 0;    // RTR - 0 for standard data frames
-  //outgoing_msg.flags.extended = 0;  // IDE - 0 for standard 11-bit IDs
-  //outgoing_msg.flags.reserved = 0;  // Reserved bit. Leave as dominant (0)
-  //outgoing_msg.len = 1;             // DLC. How many bytes to send.
-  //outgoing_msg.flags.overrun = 0;   // Leave as dominant (0)
+  pinMode(ledPin, OUTPUT);
+  
+  //debug
+  Serial.println(int(baudRate * 1000.0));
+  drs.write(openAngle);
+  digitalWrite(ledPin, HIGH);
+  delay(1500);
+  drs.write(closedAngle);
+  digitalWrite(ledPin, LOW);
 }
 
 void loop() {
   timeNow = millis();
-
   msg_read = can1.read(incoming_msg);  //sets msg_read to true (1) if message has been read
-  if ((msg_read) && incoming_msg.id == 20) {
+
+  if (msg_read == 1) {
+    digitalWrite(ledPin, HIGH);
+
     if (incoming_msg.buf[0] == 1) {
-      analogWrite(servoPin, (openAngle / 360) * 255);  //placeholder to open the wing (need to find values for this)
+      drs.write(openAngle);  //placeholder to open the wing (need to find values for this)
       Serial.println("Wing open");
+
     } else if (incoming_msg.buf[0] == 0) {
-      analogWrite(servoPin, (closedAngle / 360) * 255);  //placeholder for closing the wing, same thing ^
+      drs.write(closedAngle);  //placeholder for closing the wing, same thing ^
       Serial.println("Wing closed");
     }
     timeLast = timeNow;
     //outgoing_msg.buf[0] = S;
     //can1.write(outgoing_msg);
   } else if (timeNow - timeLast >= 5000) {
-    analogWrite(servoPin, "close");
+    digitalWrite(ledPin, LOW);
+    drs.write(closedAngle);
     Serial.println("No signal detected. Wing closed");
+    timeLast = timeNow;
+    Serial.println(msg_read);
   }
-  timeLast = timeNow;
 }

@@ -1,20 +1,23 @@
 #include <PWMServo.h>
+#define ledPin 13
+#define servoPin 19
 
 PWMServo drs;
 
-int openAngle = 30;
+int openAngle = 15;
 int closedAngle = 0;
 
-const int ledPin = 13;
+//const int ledPin = 13;
 
 void setup() {
-  // Manually set up PWM at servo frequency BEFORE attaching
-  analogWriteFrequency(19, 50);       // 50Hz servo frequency
-  analogWrite(19, 0);                 // no pulse — servo holds position
+  //manual servo set up to avoid 0-90-0 sweep
+  analogWriteFrequency(servoPin, 67);       // 67Hz servo frequency (teehee)
+  analogWrite(servoPin, 0);                 // NO MOVE THE SERVO
   delay(100);
 
-  drs.attach(19, 544, 2400);         // attach with pulse range
-  drs.write(closedAngle);            // first real command is your desired angle
+  //drs.attach(19, 544, 2400);         // attach with pulse range
+  drs.attach(servoPin);                     //servo attach
+  drs.write(closedAngle);            
 
   Serial.begin(9600);
   pinMode(ledPin, OUTPUT);
@@ -23,8 +26,10 @@ void setup() {
 void loop() {
   drs.write(openAngle);
   digitalWrite(ledPin, HIGH);
+  Serial.println("Wing open");
   delay(2500);
   drs.write(closedAngle);
   digitalWrite(ledPin, LOW);
+  Serial.println("Wing closed");
   delay(2500);
 }

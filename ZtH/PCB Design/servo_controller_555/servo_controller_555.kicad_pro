@@ -483,6 +483,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -544,8 +545,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": [
       {
         "netclass": "High Current",
@@ -694,7 +695,7 @@
         "uuid": "b9d5c487-c912-4b2b-adb3-bda43c0ac1bf"
       }
     ],
-    "used_designators": "J1-2,RV1,C1-3,D1-4,#PWR1-12,TP1-5,U1-2,R1-4",
+    "used_designators": "#PWR1-12,C1-3,D1-4,J1-2,R1-4,RV1,TP1-5,U1-2",
     "variants": []
   },
   "sheets": [

@@ -23,7 +23,6 @@ void setup() {
   drs.attach(19);
 
   can1.begin();
-  can1.setMaxMB(16);
   can1.setBaudRate(int(baudRate * 1000.0));
   Serial.begin(9600);  //start serial
   pinMode(ledPin, OUTPUT);

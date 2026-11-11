@@ -4,8 +4,8 @@
 
 PWMServo drs;
 
-int openAngle = 15;
-int closedAngle = 0;
+int openAngle = 0;
+int closedAngle = 30;
 
 //const int ledPin = 13;
 
@@ -27,9 +27,9 @@ void loop() {
   drs.write(openAngle);
   digitalWrite(ledPin, HIGH);
   Serial.println("Wing open");
-  delay(2500);
+  delay(5000);
   drs.write(closedAngle);
   digitalWrite(ledPin, LOW);
   Serial.println("Wing closed");
-  delay(2500);
+  delay(5000);
 }

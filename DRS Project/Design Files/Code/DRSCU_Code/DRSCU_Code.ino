@@ -1,14 +1,19 @@
 #include <FlexCAN_T4.h>
-#include <Servo.h>
-//Servo Setup
-Servo drs;
+#include <PWMServo.h>
 
-int openAngle = 0;     //angle to open servo to (in degrees, might change this to be raw bit value or radians or percentage of limit, idk)
-int closedAngle = 30;  //angle to close servo to (in degrees)
+#define ledPin 13
+#define servoPin 19
 
-//Timeout Setup
+//Servo Setup 1
+PWMServo drs;
+int openAngle = 27;   //angle to open servo to (in degrees, might change this to be raw bit value or radians or percentage of limit, idk)
+int closedAngle = 0;  //angle to close servo to (in degrees)
+
+//Timer Setup
 unsigned long timeNow = 0;
 unsigned long timeLast = 0;
+unsigned long stateChange = 0;
+const unsigned long debounceDelay = 200;
 
 // CAN Setup
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> can1;
@@ -17,30 +22,35 @@ CAN_message_t outgoing_msg;
 int msg_read = 0;
 
 const int baudRate = 1000;  //CAN baud rate in kb/s
-const int ledPin = 13;
 
 void setup() {
-  drs.attach(19);
+  //Servo set up 2 (to avoid 0-90-0 sweep)
+  analogWriteFrequency(servoPin, 67);  // 67Hz servo frequency (teehee)
+  analogWrite(servoPin, 0);            // NO MOVE THE SERVO
+  delay(100);
+  drs.attach(servoPin);
+  drs.write(closedAngle);
 
   can1.begin();
   can1.setBaudRate(int(baudRate * 1000.0));
+
   Serial.begin(9600);  //start serial
   pinMode(ledPin, OUTPUT);
-  
-  //debug
+
+  /*debug
   Serial.println(int(baudRate * 1000.0));
   drs.write(openAngle);
   digitalWrite(ledPin, HIGH);
   delay(1500);
   drs.write(closedAngle);
-  digitalWrite(ledPin, LOW);
+  digitalWrite(ledPin, LOW);*/
 }
 
 void loop() {
   timeNow = millis();
   msg_read = can1.read(incoming_msg);  //sets msg_read to true (1) if message has been read
 
-  if (msg_read == 1) {
+  if (msg_read == 1 && incoming_msg.id == 20 && (timeNow - stateChange >= debounceDelay)) {
     digitalWrite(ledPin, HIGH);
 
     if (incoming_msg.buf[0] == 1) {
@@ -51,6 +61,7 @@ void loop() {
       drs.write(closedAngle);  //placeholder for closing the wing, same thing ^
       Serial.println("Wing closed");
     }
+
     timeLast = timeNow;
     //outgoing_msg.buf[0] = S;
     //can1.write(outgoing_msg);

@@ -6,8 +6,8 @@
 
 //Servo Setup 1
 PWMServo drs;
-int openAngle = 27;   //angle to open servo to (in degrees, might change this to be raw bit value or radians or percentage of limit, idk)
-int closedAngle = 0;  //angle to close servo to (in degrees)
+int openAngle = 95;    //angle to open servo to (in degrees) Change if required
+int closedAngle = 70;  //angle to close servo to (in degrees) Change when required
 
 //Timer Setup
 unsigned long timeNow = 0;
@@ -51,25 +51,22 @@ void loop() {
   msg_read = can1.read(incoming_msg);  //sets msg_read to true (1) if message has been read
 
   if (msg_read == 1 && incoming_msg.id == 20 && (timeNow - stateChange >= debounceDelay)) {
-    digitalWrite(ledPin, HIGH);
-
     if (incoming_msg.buf[0] == 1) {
-      drs.write(openAngle);  //placeholder to open the wing (need to find values for this)
+      drs.write(openAngle);  //open the wing to set angle
+      digitalWrite(ledPin, HIGH);
       Serial.println("Wing open");
 
     } else if (incoming_msg.buf[0] == 0) {
-      drs.write(closedAngle);  //placeholder for closing the wing, same thing ^
+      drs.write(closedAngle);  //close wing to set angle
+      digitalWrite(ledPin, LOW);
       Serial.println("Wing closed");
     }
-
     timeLast = timeNow;
-    //outgoing_msg.buf[0] = S;
-    //can1.write(outgoing_msg);
+
   } else if (timeNow - timeLast >= 5000) {
-    digitalWrite(ledPin, LOW);
     drs.write(closedAngle);
     Serial.println("No signal detected. Wing closed");
+    digitalWrite(ledPin, LOW);
     timeLast = timeNow;
-    Serial.println(msg_read);
   }
 }

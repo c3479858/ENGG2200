@@ -6,8 +6,8 @@
 
 //Servo Setup 1
 PWMServo drs;
-int openAngle = 95;    //angle to open servo to (in degrees) Change if required
-int closedAngle = 80;  //angle to close servo to (in degrees) Change when required
+int openAngle = 93;    //angle to open servo to (in degrees) Change if required
+int closedAngle = 72;  //angle to close servo to (in degrees) Change when required
 
 //Timer Setup
 unsigned long timeNow = 0;
